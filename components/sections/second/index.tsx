@@ -1,16 +1,8 @@
-import Image from 'next/legacy/image';
-import progress from '../../../assets/images/progress_1.svg';
-import coach from '../../../assets/images/coach_2.svg';
-import innovation from '../../../assets/images/innovation_1.svg';
-import Link from 'next/link';
 import styles from './styles.module.css';
 import { useEffect, useRef, useState } from 'react';
 import WorkUI from '../../work';
 
 const SecondSection = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const topRef = useRef<HTMLParagraphElement>(null);
-
   useEffect(() => {
     const section = document.querySelector('#works') as HTMLDivElement;
     const topElement = section.querySelector('#top') as HTMLParagraphElement;
@@ -157,7 +149,7 @@ const SecondSection = () => {
           <WorkUI
             bgcolor="var(--background-color-primary)"
             color="#fff"
-            image={'/images/sample.png'}
+            image={'/images/blog.png'}
             title="Blog for an automobile client"
             text="A full stack development of an automobile blog. With article editing, approval, deleting features, and statistics on author's performance."
             accessKey="blog"
