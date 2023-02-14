@@ -1,0 +1,121 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+@font-face {
+  font-family: 'Ubuntu-R';
+  src: url('../public/fonts/Ubuntu-R.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-RI';
+  src: url('../public/fonts/Ubuntu-RI.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-B';
+  src: url('../public/fonts/Ubuntu-B.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-Mono-R';
+  src: url('../public/fonts/UbuntuMono-R.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-Mono-RI';
+  src: url('../public/fonts/UbuntuMono-RI.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-M';
+  src: url('../public/fonts/Ubuntu-M.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-MI';
+  src: url('../public/fonts/Ubuntu-MI.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-C';
+  src: url('../public/fonts/Ubuntu-C.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-L';
+  src: url('../public/fonts/Ubuntu-L.ttf');
+}
+@font-face {
+  font-family: 'Ubuntu-LI';
+  src: url('../public/fonts/Ubuntu-LI.ttf');
+}
+@font-face {
+  font-family: 'DancingScript-Bold';
+  src: url('../public/fonts/DancingScript-Bold.ttf');
+}
+@font-face {
+  font-family: 'DancingScript-Regular';
+  src: url('../public/fonts/DancingScript-Regular.ttf');
+}
+@font-face {
+  font-family: 'DancingScript-Medium';
+  src: url('../public/fonts/DancingScript-Medium.ttf');
+}
+@font-face {
+  font-family: 'DancingScript-SemiBold';
+  src: url('../public/fonts/DancingScript-SemiBold.ttf');
+}
+:root {
+  --font-primary: 'Ubuntu-R', -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  --font-bold: 'Ubuntu-B', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-logo: 'DancingScript-Regular', -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  --font-italics: 'Ubuntu-RI', -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  --background-color-primary: #160f29;
+  --background-color-secondary: #9b2226;
+  --background-color-tertiary: #eff2f6;
+  --btn-background-color: #9b2226;
+  --unique-text-color: #ff4800;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-primary);
+  scroll-behavior: smooth;
+  user-select: none;
+  scrollbar-width: thin;
+  scrollbar-color: var(--background-color-primary) #9b2226;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: none;
+  font-family: 'Inder', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  cursor: pointer;
+}

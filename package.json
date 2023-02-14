@@ -1,0 +1,34 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Main site",
+  "access": "public",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3010",
+    "build": "next build",
+    "start": "next start -p 2900",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "next": "^13.1.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.54.8",
+    "sharp": "^0.31.3"
+  },
+  "devDependencies": {
+    "@types/node": "18.7.15",
+    "@types/react": "18.0.18",
+    "@types/react-dom": "18.0.6",
+    "autoprefixer": "^10.4.8",
+    "eslint": "8.23.0",
+    "eslint-config-next": "^13.1.5",
+    "typescript": "4.8.2"
+  },
+  "author": "Joshua Mayowa",
+  "license": "ISC"
+}

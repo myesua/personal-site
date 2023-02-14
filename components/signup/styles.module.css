@@ -1,0 +1,361 @@
+.container {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  /* gap: 3rem; */
+  scroll-snap-type: y mandatory;
+}
+
+.parent {
+  padding: 5rem 0;
+  width: 100%;
+  /*margin: 0 auto; */
+}
+
+.wrapper {
+  background-color: rgba(255, 228, 196, 0.5);
+  width: 90%;
+  margin: auto;
+  height: 58rem;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  border-radius: 20px;
+}
+
+.top__shape {
+  border-bottom-right-radius: 20px;
+  width: 220px;
+  height: 180px;
+  background-color: #ff7978;
+  clip-path: circle(45% at 85% 70%);
+  margin-top: 0rem;
+  transform: rotate(179.9deg);
+  position: relative;
+  z-index: 2;
+}
+
+.bottom__shape {
+  border-bottom-right-radius: 20px;
+  width: 220px;
+  height: 180px;
+  background-color: #ff7978;
+  clip-path: circle(45% at 85% 70%);
+  margin-top: 0.5rem;
+  float: right;
+  margin-right: 0;
+}
+
+.box {
+  background-color: #000f41;
+  height: 50rem;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 150px;
+}
+
+.divider {
+  height: 35rem;
+}
+
+.box__childContainer {
+  margin: 0 auto;
+  width: 80%;
+  padding: 2rem 0;
+}
+
+.box__childBody {
+  display: flex;
+  /* padding: 2rem 0; */
+  align-items: center;
+}
+
+.box__childMain {
+  display: grid;
+  gap: 6rem;
+}
+
+.caption {
+  font-weight: bold;
+  font-size: 2rem;
+  color: floralwhite;
+  width: 18rem;
+}
+
+.caption span {
+  color: #ff7978;
+}
+
+.image {
+  position: relative;
+  width: 100%;
+  margin-left: -2rem;
+}
+
+/*Rotate element @ 15secs infinitely*/
+
+.rotate {
+  animation: rotation 15s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+/* .form1 {
+  display: none;
+} */
+
+.accountFormBox {
+  padding: 0;
+  border-radius: 20px;
+  background-color: #fff;
+  width: 25rem;
+  z-index: 3;
+}
+
+.accountFormMain {
+  padding: 2rem;
+}
+
+.header {
+  background-color: rgba(127, 255, 212, 0.3);
+  border-radius: 20px;
+  padding: 5px 6px;
+  display: flex;
+  gap: 15px;
+  width: 12.2rem;
+}
+
+.header span:first-child {
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: #000;
+}
+
+.header span:nth-child(2) {
+  background-color: rgb(2, 26, 18);
+  border-radius: 20px;
+  padding: 10px 15px;
+  color: #fff;
+}
+
+.nameContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.nameContainer input {
+  width: 160px;
+}
+
+.nameContainer input:focus {
+  box-shadow: 0 1.5px 0 0 #29379b;
+}
+
+.name {
+  display: grid;
+  gap: 0;
+}
+
+.textInput {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  outline: none;
+  padding: 0.5rem 0;
+  /* width: 250px; */
+  font-size: 1rem;
+}
+
+.emailContainer {
+  margin-bottom: 1rem;
+}
+
+.emailContainer input {
+  width: 100%;
+}
+
+.emailContainer input:focus {
+  box-shadow: 0 1.5px 0 0 #29379b;
+}
+
+.passwordContainer {
+  margin-bottom: 1rem;
+}
+
+.passwordContainer input {
+  width: 100%;
+}
+
+.passwordContainer input:focus {
+  box-shadow: 0 1.5px 0 0 #29379b;
+}
+
+.passwordComplexityChecker {
+  font-size: 0.8rem;
+  margin: 2rem 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.complexitymarkerContainer {
+  display: flex;
+  align-items: center;
+}
+
+.actionButtons {
+  display: grid;
+  gap: 1.3rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.submitContainer input {
+  color: #fff;
+  background-color: rgb(2, 26, 18);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+}
+
+.signupButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.formFooter {
+  background-color: rgba(127, 255, 212, 0.05);
+  width: 100%;
+  margin-bottom: -0.5rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.formFooter p {
+  font-size: 0.5rem;
+  padding: 0.7rem 2rem;
+  text-align: center;
+}
+
+.formFooter a {
+  color: blue;
+}
+
+.formFooter a:visited {
+  color: purple;
+}
+
+/*Responsiveness */
+@media screen and (max-width: 300px) {
+}
+
+@media screen and (max-width: 450px) {
+  .wrapper {
+    width: 50rem;
+  }
+
+  .top__shape {
+    z-index: 0;
+  }
+
+  .box {
+    width: 25rem;
+  }
+
+  .textInput {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 750px) {
+  .top__shape {
+    z-index: 0;
+  }
+
+  .box__childMain {
+    margin-left: -3rem;
+  }
+
+  .accountFormBox {
+    min-width: 25rem;
+  }
+
+  .nameContainer {
+    display: grid;
+  }
+
+  .nameContainer input {
+    width: 100%;
+  }
+
+  .signupButton span {
+    font-size: 14px;
+  }
+
+  .formFooter {
+    margin-top: -2rem;
+  }
+}
+
+@media screen and (min-width: 840px) and (max-width: 992px) {
+  /* .accountFormBox {
+    width: 35rem;
+  } */
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1275px) {
+  .box {
+    top: 145px;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1500px) {
+}
+
+@media screen and (min-width: 1536px) and (max-width: 3000px) {
+  .box {
+    top: 140px;
+  }
+
+  .box__childContainer {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .box__childBody {
+    gap: 3rem;
+  }
+}
+
+@media screen and (min-width: 3100px) {
+  .box {
+    top: 145px;
+  }
+
+  .box__childContainer {
+    width: 30%;
+    margin: 0 auto;
+  }
+}

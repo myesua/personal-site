@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  scroll-snap-type: y mandatory;
+  background-color: var(--background-color-tertiary);
+}
+
+.wrapper {
+  background-color: var(--background-color-primary);
+  color: white;
+  width: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+@media screen and (max-width: 300px) {
+}
+
+@media screen and (min-width: 641px) and (max-width: 690px) {
+}
+
+@media screen and (min-width: 700px) and (max-width: 992px) {
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1275px) {
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1500px) {
+}
+
+@media screen and (min-width: 1536px) and (max-width: 3000px) {
+}
+
+@media screen and (min-width: 3100px) {
+}

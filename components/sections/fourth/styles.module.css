@@ -1,0 +1,42 @@
+/*Fourth Section styles*/
+.wrapper {
+  padding: 1rem 0;
+  padding-bottom: 2rem;
+}
+.wrapper h2 {
+  text-align: center;
+  text-decoration: underline;
+  font-family: var(--font-italics);
+  font-size: 2.4rem;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .container {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .container {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  .container {
+    width: 30%;
+  }
+}

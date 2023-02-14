@@ -1,0 +1,53 @@
+.card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+  border-radius: 10px;
+  box-shadow: #001b471f 0px 12px 32px;
+}
+.card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.card:hover .card__inner {
+  transform: rotateY(180deg);
+}
+.card__front,
+.card__back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.card__back {
+  transform: rotateY(180deg);
+}
+.card__body {
+  display: grid;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+.card__title {
+  font-size: 1.7rem;
+  color: var(--unique-text-color);
+}
+.card__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  user-select: none;
+}
+.card__action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

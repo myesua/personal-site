@@ -1,0 +1,52 @@
+/*  Fifth Section Styles */
+.wrapper {
+  background-color: var(--background-color-primary);
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  padding-bottom: 3rem;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.heading {
+  font-size: 2.4rem;
+  text-align: center;
+  font-family: var(--font-italics);
+  text-decoration: underline;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.container div {
+  padding: 0.5rem 1rem;
+  background-color: var(--unique-text-color);
+  border-radius: 20px;
+  color: #f9f9f9;
+}
+@media screen and (min-width: 999px) {
+  .container {
+    width: 70%;
+  }
+}
+
+/*Xtra Large screens*/
+@media screen and (min-width: 1536px) and (max-width: 3000px) {
+  .container {
+    width: 50%;
+  }
+}
+/*Xtra-Xtra-Large screens*/
+@media screen and (min-width: 3100px) {
+  .container {
+    width: 30%;
+  }
+}
