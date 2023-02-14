@@ -32,6 +32,29 @@ const WorkUI = ({
     backgroundRepeat: 'no-repeat',
     height: '300px',
   };
+  useEffect(() => {
+    const cards = Array.from(
+      document.querySelectorAll<HTMLDivElement>('#card'),
+    );
+    cards[0].addEventListener('mouseenter', () =>
+      cards[0].setAttribute('style', 'background-color: #fff'),
+    );
+    cards[2].addEventListener('mouseenter', () =>
+      cards[2].setAttribute('style', 'background-color: #fff'),
+    );
+    cards[0].addEventListener('mouseleave', () =>
+      cards[0].setAttribute(
+        'style',
+        `background-color: ${bgcolor}; color: #fff`,
+      ),
+    );
+    cards[2].addEventListener('mouseleave', () =>
+      cards[2].setAttribute(
+        'style',
+        `background-color: ${bgcolor}; color: #fff`,
+      ),
+    );
+  }, []);
   return (
     <div
       className={styles.card}
