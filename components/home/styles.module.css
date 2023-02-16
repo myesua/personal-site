@@ -4,21 +4,17 @@
   height: 100vh;
   margin: 0;
   padding: 0;
-  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
   background-color: var(--background-color-tertiary);
 }
-
+/* .container section {
+  scroll-margin-top: 20px;
+  transition: all 0.5s linear;
+} */
 .wrapper {
   background-color: var(--background-color-primary);
   color: white;
   width: 100%;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-}
-
-.section {
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 @media screen and (max-width: 300px) {

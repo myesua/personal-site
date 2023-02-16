@@ -69,7 +69,7 @@ const FirstSection = () => {
           </p>
           <ul className={styles.actionButtons}>
             <Link href="https://linkedin.com/in/joshuaomayowa" legacyBehavior>
-              <a>
+              <a target="_blank" rel="noopener noreferrer">
                 <li className={styles.registerButton}>Connect</li>
               </a>
             </Link>

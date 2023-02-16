@@ -77,7 +77,7 @@ const ThirdSection = () => {
   }, [data]);
   useEffect(() => {}, [data]);
   return (
-    <div className={styles.parent} id="gallery">
+    <div className={styles.parent}>
       <h2>Gallery</h2>
       <div className={styles.container}>
         <div className={styles.wrapper}>

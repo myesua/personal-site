@@ -9,11 +9,6 @@ import SecondSection from '../sections/second';
 import ThirdSection from '../sections/third';
 import styles from './styles.module.css';
 
-// const styles = {
-//   // wrapper: `bg-[#000F41] text-white`,
-//   wrapper: 'bg-[url("../assets/images/classroom.svg")] bg-[#000F41] text-black',
-// };
-
 const HomePage = () => {
   return (
     <div className={styles.container}>
@@ -25,10 +20,10 @@ const HomePage = () => {
           <FirstSection />
         </div>
       </section>
-      <section className={styles.section}>
+      <section className={styles.section} id="works">
         <SecondSection />
       </section>
-      <section className={styles.section}>
+      <section className={styles.section} id="gallery">
         <ThirdSection />
       </section>
       <section className={styles.section}>

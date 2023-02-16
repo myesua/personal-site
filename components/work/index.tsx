@@ -37,21 +37,21 @@ const WorkUI = ({
       document.querySelectorAll<HTMLDivElement>('#card'),
     );
     cards[0].addEventListener('mouseenter', () =>
-      cards[0].setAttribute('style', 'background-color: #fff'),
+      cards[0].setAttribute('style', 'background-color: #fff; cursor: pointer'),
     );
     cards[2].addEventListener('mouseenter', () =>
-      cards[2].setAttribute('style', 'background-color: #fff'),
+      cards[2].setAttribute('style', 'background-color: #fff; cursor: pointer'),
     );
     cards[0].addEventListener('mouseleave', () =>
       cards[0].setAttribute(
         'style',
-        `background-color: ${bgcolor}; color: #fff`,
+        `background-color: ${bgcolor}; color: #fff; cursor: pointer`,
       ),
     );
     cards[2].addEventListener('mouseleave', () =>
       cards[2].setAttribute(
         'style',
-        `background-color: ${bgcolor}; color: #fff`,
+        `background-color: ${bgcolor}; color: #fff; cursor: pointer`,
       ),
     );
   }, []);

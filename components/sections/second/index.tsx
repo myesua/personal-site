@@ -4,7 +4,7 @@ import WorkUI from '../../work';
 
 const SecondSection = () => {
   useEffect(() => {
-    const section = document.querySelector('#works') as HTMLDivElement;
+    const section = document.querySelector('#container') as HTMLDivElement;
     const topElement = section.querySelector('#top') as HTMLParagraphElement;
     const bottomElement = section.querySelector('#bottom') as HTMLDivElement;
     const leftElement = section.querySelector('#left') as HTMLDivElement;
@@ -127,20 +127,20 @@ const SecondSection = () => {
       const target = element as HTMLDivElement;
       if (target.accessKey === 'blog')
         target.addEventListener('click', () =>
-          window.open(`${blog}`, '__blank'),
+          window.open(`${blog}`, '_blank'),
         );
       else if (target.accessKey === 'academy')
         target.addEventListener('click', () =>
-          window.open(`${academy}`, '__blank'),
+          window.open(`${academy}`, '_blank'),
         );
       else
         target.addEventListener('click', () =>
-          window.open(`${uiKit}`, '__blank'),
+          window.open(`${uiKit}`, '_blank'),
         );
     });
   }, []);
   return (
-    <div className={styles.container} id="works">
+    <div className={styles.container} id="container">
       <p className={styles.work__heading} id="top">
         {/* Here are some of my works */}
       </p>

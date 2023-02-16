@@ -2,15 +2,54 @@ import Image from 'next/legacy/image';
 import Link from 'next/link';
 import MenuBar from '../../public/icons/menubar.svg';
 import styles from './styles.module.css';
-import { useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
 
 const Header = () => {
-  const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(true);
+  const router = useRouter();
+  const [hydrated, setHydrated] = useState(false);
+  const ref1 = useRef<HTMLAnchorElement>(null);
+  const ref2 = useRef<HTMLAnchorElement>(null);
 
   const handleHiddenMenu = () => {
     setOpen(!isOpen);
   };
-
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+  const customRef1 = useCallback((ref: HTMLAnchorElement) => {
+    ref.setAttribute('style', 'cursor:pointer');
+    ref.addEventListener('click', () => {
+      const gallery = document.querySelector('#gallery') as HTMLElement;
+      if (gallery === null) router.push('/#gallery');
+      else gallery.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    });
+  }, []);
+  const customRef2 = useCallback((ref: HTMLAnchorElement) => {
+    ref.setAttribute('style', 'cursor:pointer');
+    ref.addEventListener('click', () => {
+      const works = document.querySelector('#works') as HTMLElement;
+      if (works === null) router.push('/#works');
+      else works.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    });
+  }, []);
+  const customRef3 = useCallback((ref: HTMLAnchorElement) => {
+    // ref element accessible here
+    ref?.addEventListener('click', () => {
+      const gallery = document.querySelector('#gallery') as HTMLElement;
+      if (gallery === null) router.push('/#gallery');
+      else gallery.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    });
+  }, []);
+  const customRef4 = useCallback((ref: HTMLAnchorElement) => {
+    // ref element accessible here
+    ref?.addEventListener('click', () => {
+      const works = document.querySelector('#works') as HTMLElement;
+      if (works === null) router.push('/#works');
+      else works.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    });
+  }, []);
   return (
     <nav className={styles.navWrapper}>
       <div className={styles.container}>
@@ -46,16 +85,16 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/#gallery" legacyBehavior>
-              <a>Gallery</a>
-            </Link>
+            <a id="hgallery" ref={customRef1}>
+              Gallery
+            </a>
           </li>
         </ul>
         <ul className={styles.rightNav}>
           <li>
-            <Link href="/#works" legacyBehavior>
-              <a>Works</a>
-            </Link>
+            <a id="hworks" ref={customRef2}>
+              Works
+            </a>
           </li>
           <li className={styles.registerButton}>
             <Link href="mailto:info@webnxt.xyz" legacyBehavior>
@@ -63,7 +102,7 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-        {isOpen && (
+        {!isOpen ? (
           <div className={styles.toggledMenuListContainer}>
             <div className={styles.closeIconContainer}></div>
             <ul className={styles.toggledMenuListParent}>
@@ -83,14 +122,10 @@ const Header = () => {
                 </Link>
               </li>
               <li className={styles.toggledMenuList}>
-                <Link href="/#gallery" legacyBehavior>
-                  <a>Gallery</a>
-                </Link>
+                <a ref={customRef3}>Gallery</a>
               </li>
               <li className={styles.toggledMenuList}>
-                <Link href="/#works" legacyBehavior>
-                  <a>Works</a>
-                </Link>
+                <a ref={customRef4}>Works</a>
               </li>
               <li className={styles.toggledMenuList}>
                 <Link href="mailto:info@webnxt.xyz" legacyBehavior>
@@ -99,6 +134,8 @@ const Header = () => {
               </li>
             </ul>
           </div>
+        ) : (
+          ''
         )}
       </div>
     </nav>

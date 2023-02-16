@@ -21,7 +21,7 @@ const AboutPage = () => {
         <h1>JOSHUA OGUNYELE MAYOWA</h1>
         <p>
           Joshua is a software developer and a cyber guy. He started his tech
-          career while in college by making friends with CS students though his
+          career while in college by making friends with CS students, though his
           background is Accounting and Management. He enrolled into a computer
           school and later discovered his interest in programming. He has
           experience in several aspects of technology. Leaving a market research
