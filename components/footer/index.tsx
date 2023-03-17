@@ -38,17 +38,23 @@ const Footer = () => {
           <ul className={styles.footerNavList}>
             <li>
               <Link href="https://twitter.com" legacyBehavior>
-                <a>Twitter</a>
+                <a target="_blank" rel="noopener noreferrer">
+                  Twitter
+                </a>
               </Link>
             </li>
             <li>
-              <Link href="https://facebook.com" legacyBehavior>
-                <a>Facebook</a>
+              <Link href="https://github.com/mjosh51" legacyBehavior>
+                <a target="_blank" rel="noopener noreferrer">
+                  Github
+                </a>
               </Link>
             </li>
             <li>
               <Link href="https://linkedin.com/" legacyBehavior>
-                <a>LinkedIn</a>
+                <a target="_blank" rel="noopener noreferrer">
+                  LinkedIn
+                </a>
               </Link>
             </li>
           </ul>

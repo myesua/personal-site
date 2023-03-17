@@ -21,6 +21,9 @@ import oracle from '../../../public/icons/oracle.svg';
 import figma from '../../../public/icons/figma.svg';
 import linux from '../../../public/icons/linux.svg';
 import postman from '../../../public/icons/postman.svg';
+import php from '../../../public/icons/php.svg';
+import docker from '../../../public/icons/docker.svg';
+import mysql from '../../../public/icons/mysql.svg';
 
 const FourthSection = () => {
   return (
@@ -48,6 +51,9 @@ const FourthSection = () => {
         <Image src={oracle} alt="oracle-image" priority={true} />
         <Image src={figma} alt="figma-image" priority={true} />
         <Image src={linux} alt="linux-image" priority={true} />
+        <Image src={docker} alt="docker-image" priority={true} />
+        <Image src={php} alt="php-image" priority={true} />
+        <Image src={mysql} alt="mysql-image" priority={true} />
         <Image src={postman} alt="postman-image" priority={true} />
       </div>
     </div>

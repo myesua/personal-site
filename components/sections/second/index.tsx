@@ -122,7 +122,7 @@ const SecondSection = () => {
     const cardElement = Array.from(document.querySelectorAll('#card'));
     const blog = 'https://blog.bechellente.com';
     const academy = 'https://youngrise.org';
-    const uiKit = 'https://github.com/mjosh51?tab=repositories';
+    const uiKit = 'https://extractr.webnxt.xyz';
 
     cardElement.forEach((element) => {
       const target = element as HTMLDivElement;
@@ -168,13 +168,14 @@ const SecondSection = () => {
         </div>
         <div
           className={`${styles.feature__child} ${styles.bottom}`}
-          id="bottom">
+          id="bottom"
+        >
           <WorkUI
             bgcolor="var(--background-color-primary)"
             color="#fff"
-            image={'/images/ui-kit.png'}
-            title="UI-KIT for mostly used CSS, JavaScript."
-            text="A personal project being developed as a to go for CSS and JavaScript components. Users can copy component code and use directly in their CSS, JavaScript files.Still in progress."
+            image={'/images/extract.png'}
+            title="A tool to extract texts from an image file"
+            text="A personal project being developed as a to go tool for image text extraction. Built with `ExpressJS` + `Tesseract`"
             accessKey="ui-kit"
           />
         </div>
