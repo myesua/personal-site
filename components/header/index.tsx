@@ -19,16 +19,16 @@ const Header = () => {
     setHydrated(true);
   }, []);
   const customRef1 = useCallback((ref: HTMLAnchorElement) => {
-    ref.setAttribute('style', 'cursor:pointer');
-    ref.addEventListener('click', () => {
+    ref?.setAttribute('style', 'cursor:pointer');
+    ref?.addEventListener('click', () => {
       const gallery = document.querySelector('#gallery') as HTMLElement;
       if (gallery === null) router.push('/#gallery');
       else gallery.scrollIntoView({ block: 'center', behavior: 'smooth' });
     });
   }, []);
   const customRef2 = useCallback((ref: HTMLAnchorElement) => {
-    ref.setAttribute('style', 'cursor:pointer');
-    ref.addEventListener('click', () => {
+    ref?.setAttribute('style', 'cursor:pointer');
+    ref?.addEventListener('click', () => {
       const works = document.querySelector('#works') as HTMLElement;
       if (works === null) router.push('/#works');
       else works.scrollIntoView({ block: 'center', behavior: 'smooth' });

@@ -29,9 +29,10 @@ const SecondSection = () => {
       while (iRow < iIndex) {
         sContents += aText[iRow++] + '<br />';
       }
-      if (aText[iIndex] !== undefined)
+      if (aText[iIndex] !== undefined && destination !== null)
         destination.innerHTML =
           sContents + aText[iIndex].substring(0, iTextPos) + '_';
+      else return;
       if (iTextPos++ == iArrLength) {
         iTextPos = 0;
         iIndex++;
